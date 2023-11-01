@@ -1,5 +1,5 @@
 [package]
-name = "hate-boilerplates"
+name = "hatebp"
 version = "0.1.0"
 edition = "2021"
 description = "changwoolab's utilities for working without boilerplates"
