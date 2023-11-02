@@ -10,6 +10,6 @@ cargo install hbp
 
 ## Features
 
-| command         | explanation                                             |
-| --------------- | ------------------------------------------------------- |
-| `--rn-debugger` | Shut down the running React Native Debugger and Restart |
+| command       | explanation                                             |
+| ------------- | ------------------------------------------------------- |
+| `rn-debugger` | Shut down the running React Native Debugger and Restart |

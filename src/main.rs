@@ -17,7 +17,7 @@ fn main() {
 
     let command = &args[1];
     match command.as_str() {
-        "--rn-debugger" => {
+        "rn-debugger" => {
             Command::new("killall")
                 .arg("React Native Debugger")
                 .spawn()
@@ -33,6 +33,9 @@ fn main() {
 
             return;
         },
-        _ => {}
+        _ => {
+            println!("Command not found");
+            return;
+        }
     }
 }
