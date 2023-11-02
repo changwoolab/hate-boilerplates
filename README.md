@@ -8,6 +8,13 @@ My utilities for avoiding boilerplates
 cargo install hbp
 ```
 
+or
+
+```
+brew tap hbp/tap
+brew install hbp
+```
+
 ## Usage
 
 ```
