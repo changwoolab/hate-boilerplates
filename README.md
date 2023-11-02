@@ -8,7 +8,19 @@ My utilities for avoiding boilerplates
 cargo install hbp
 ```
 
-## Features
+## Usage
+
+```
+hbp [command]
+```
+
+### Example
+
+```
+hbp rn-debugger
+```
+
+## Commands
 
 | command       | explanation                                             |
 | ------------- | ------------------------------------------------------- |
