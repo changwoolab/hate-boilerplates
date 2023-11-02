@@ -11,7 +11,7 @@ cargo install hbp
 or
 
 ```
-brew tap hbp/tap
+brew tap changwoolab/hbp
 brew install hbp
 ```
 
