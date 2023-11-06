@@ -1,29 +1,24 @@
+mod arg_parser;
+
 use std::env;
 use std::process::Command;
 use std::{thread, time};
+use crate::arg_parser::parser;
+use crate::arg_parser::parser::Query;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
 
-    if args.len() < 2 {
-        println!("Please provide a command");
-        return;
-    }
+    let command = parser::parse_args(args).unwrap();
 
-    if args.len() > 2 {
-        println!("Please provide only one command");
-        return;
-    }
-
-    let command = &args[1];
-    match command.as_str() {
-        "rn-debugger" => {
+    match command.query {
+        Query::RNDebugger => {
             Command::new("killall")
                 .arg("React Native Debugger")
                 .spawn()
                 .expect("failed to execute process");
 
-            thread::sleep(time::Duration::from_millis(1500));
+            thread::sleep(time::Duration::from_millis(1000));
 
             Command::new("open")
                 .arg("-a")
@@ -39,3 +34,4 @@ fn main() {
         }
     }
 }
+
