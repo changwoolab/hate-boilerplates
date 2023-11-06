@@ -1,6 +1,9 @@
 use std::process::Command;
 use std::{thread, time};
 
+/**
+ * Restarts React Native Debugger
+ */
 pub fn restart() {
     Command::new("killall")
         .arg("React Native Debugger")
