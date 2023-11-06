@@ -1,8 +1,7 @@
 mod arg_parser;
+mod rn_debugger;
 
 use std::env;
-use std::process::Command;
-use std::{thread, time};
 use crate::arg_parser::parser;
 use crate::arg_parser::parser::Query;
 
@@ -13,20 +12,7 @@ fn main() {
 
     match command.query {
         Query::RNDebugger => {
-            Command::new("killall")
-                .arg("React Native Debugger")
-                .spawn()
-                .expect("failed to execute process");
-
-            thread::sleep(time::Duration::from_millis(1000));
-
-            Command::new("open")
-                .arg("-a")
-                .arg("React Native Debugger")
-                .spawn()
-                .expect("failed to execute process");
-
-            return;
+            rn_debugger::restart();
         },
         _ => {
             println!("Command not found");
