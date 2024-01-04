@@ -16,7 +16,7 @@ pub fn parse_args(args: Vec<String>) -> Result<QueryAndArgs, String> {
     let args = args[2..].to_vec();
 
     match command.as_str() {
-        "rn-debugger" => {
+        "rnd" => {
             return Ok(QueryAndArgs {
                 query: Query::RNDebugger,
                 args,

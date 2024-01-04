@@ -24,11 +24,11 @@ hbp [command]
 ### Example
 
 ```
-hbp rn-debugger
+hbp rnd
 ```
 
 ## Commands
 
-| command       | explanation                                             |
-| ------------- | ------------------------------------------------------- |
-| `rn-debugger` | Shut down the running React Native Debugger and Restart |
+| command | explanation                                             |
+| ------- | ------------------------------------------------------- |
+| `rnd`   | Shut down the running React Native Debugger and Restart |
